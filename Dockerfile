@@ -1,5 +1,5 @@
 # https://nodejs.org/en/docs/guides/nodejs-docker-webapp/#creating-a-dockerfile
-FROM node:slim
+FROM node
 
 # Create app directory
 WORKDIR /usr/src/app
