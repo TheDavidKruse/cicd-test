@@ -1,0 +1,16 @@
+# I am using a nodejs for my demo application
+language: node_js
+node_js:
+  - "node"
+
+# include the docker service so that we can use the docker command in
+# the deployment script
+services:
+  - docker
+
+# same as the official documentation
+deploy:
+  provider: script
+  script: bash deploy.sh
+  on:
+branch: master

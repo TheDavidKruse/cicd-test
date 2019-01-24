@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8000;
+const HOST = '0.0.0.0';
 const cors = require('cors');
 const logger = require('morgan');
 
@@ -17,6 +18,6 @@ app.get("/", (req, res) => {
   res.status(200).json({msg: "I am up!"})
 })
 
-app.listen(port, function() {
-  console.log("listening on port: ", port);
-})
+app.listen(port, HOST)
+console.log("listening on port: ", port);
+
